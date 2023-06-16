@@ -1,0 +1,222 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    user-select: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+    position: relative;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    background-image: url(../img/signup-login-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+video{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    
+}
+.signup-form::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    backdrop-filter: blur(15px);
+}
+
+.signup-form{
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    width: 30rem;
+    height: 60vh;
+    border: 1px solid #a1a1a1;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+.form-menu{
+    display: flex;
+    border-radius: 4ch;
+    border: 1px solid #fff;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-around;
+    -webkit-border-radius: 4ch;
+    -moz-border-radius: 4ch;
+    -ms-border-radius: 4ch;
+    -o-border-radius: 4ch;
+}
+
+.form-menu button{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 800;
+    list-style: none;
+    text-decoration: none;
+    padding: .5rem 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 2ch;
+    -webkit-border-radius: 2ch;
+    -moz-border-radius: 2ch;
+    -ms-border-radius: 2ch;
+    -o-border-radius: 2ch;
+    backdrop-filter: blur(15px);
+}
+
+.form-menu .active{
+  background: #fff;  
+  color: black;
+}
+.form-menu button:hover{
+  background: #fff;
+  color: black;
+}
+
+.signup-form form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.input-box{
+    position: relative;
+    border-bottom: 1px solid #fff;
+    padding: .5rem 0 0 ;
+}
+.input-box select
+{
+ font-size: 1.1rem;
+}
+
+.input-box select:focus option{
+    color: black;
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.input-box select,
+.input-box input{
+    width: 100%;
+    padding: .5rem;
+    background: transparent;
+    color: #fff;
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+}
+
+.input-box span{
+    position: absolute;
+    right: .2rem;
+    color: #fff;
+
+}
+
+.input-box label{
+
+    position: absolute;
+    bottom: .5rem;
+    left: .5rem;
+    color: #fff;
+}
+.signup-btn{
+    padding: .5rem 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -.5rem;
+    font-size: small;
+    transition: all 500ms ease-in-out;
+}
+.quest{
+    color: #fff;
+}
+
+.quest a{
+    color: red;
+}
+
+#login{
+    position: absolute;
+    right: 100%;
+}
+#signup{
+    position: absolute;
+    right: 0%;
+}
+
+.form-check{
+    display: flex;
+    gap: 1rem;
+    color: #fff;
+}
+
+.form-check input[type="radio"]:checked{
+    background: #2205e5;
+}
+.form-check input[type="radio"]{
+    width: 1rem;
+    cursor: pointer;
+    background: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}

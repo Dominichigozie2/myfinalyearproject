@@ -1,0 +1,415 @@
+/* ==================== gogle fonts=========================== */
+*{
+    font-family: "Utuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+body{
+    min-height: 100vh;
+    /* overflow: hidden; */
+}
+
+.bord-contain{
+    position: relative;
+    width: 100%;
+    background: red;
+}
+
+
+/* ==================Navigation========================= */
+.navigation{
+   position: fixed;
+   width: 300px;
+   height: 100%;
+   /* background: var(--blue); */
+   border-left: 5px solid var(--white);
+   transition: all 0.5s;
+   -webkit-transition: all 0.5s;
+   -moz-transition: all 0.5s;
+   -ms-transition: all 0.5s;
+   -o-transition: all 0.5s;
+   overflow: hidden;
+}
+
+.navigation.active{
+    width: 80px;
+}
+.navigation ul{
+   position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered{
+    background-color: var(--white);
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+    padding: 1rem;
+    display: flex;
+    
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: capitalize;
+
+}
+
+.message-count{
+    position: absolute;
+    padding: .5rem;
+    top: .5rem;
+    left: 2.8rem;
+    width: 2rem;
+    font-size: .8rem;
+    background: red;
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    justify-content: center;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    color: var(--gray);
+}
+
+.navigation ul li.hovered a,
+.navigation ul li:hover a{
+    color: var(--blue);
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon i{
+    font-size: 1.75rem;
+}
+ 
+.navigation ul li a .tittle{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li.hovered a::before,
+.navigation ul li:hover a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow:  35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+.navigation ul li.hovered a::after,
+.navigation ul li:hover a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow:  35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+/* =========main==================== */
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggler{
+    position: relative;
+    top: 0;
+    width: 60px;
+    /* background: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px 0 35px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label i{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============cards============== */
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+.cardBox .card{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 30px;
+    box-shadow: 0 7px 25px var(--gray);
+    transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--blue);
+}
+
+.cardBox .card .cardName{
+    color: var(--black2);
+    font-size: 1.1rem;
+    margin-top: 5px;
+    text-transform: capitalize;
+}
+.cardBox .card .iconBox{
+    font-size: 3.2rem;
+    color: var(--black2);
+}
+
+.cardBox .card:hover{
+    background: var(--blue);
+}
+
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBox{
+    color: var(--white);
+}
+
+
+
+
+/* =========== recent messages=================== */
+.details{
+    position: relative;
+    width: 100%;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 1rem;
+}
+.details .recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 420px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px #0003;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.details .cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardHeader h2{
+    font-weight: 600;
+    color: var(--blue);
+}
+.cardHeader .btn{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--blue);
+    text-decoration: none;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    color: var(--white);
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 800;
+}
+
+.details .recentOrders table tr{
+    color: var(--black1);
+    border-bottom: 1px solid var(--gray);
+}
+
+.details .recentOrders table tr:last-child{
+    border-bottom: none;
+}
+tr:nth-of-type(2n){
+  background: rgba(0, 0, 255, 0.104);
+}
+.details .recentOrders table tr td{
+    padding: 10px;
+}
+.details .recentOrders table tr td:last-child{
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2){
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2){
+    text-align: center;
+}
+
+
+
+/* =========new users ========== */
+.recentOrders table tr td img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* =========new users ========== */
+/* =========== recent messages=================== */

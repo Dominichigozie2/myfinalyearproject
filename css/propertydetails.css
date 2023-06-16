@@ -1,0 +1,155 @@
+:root{
+    --color-primary: rgba(206, 199, 255, 0.8);
+    --success: #001ade;
+    --color-danger: #678cfb;
+    --warning: #000f84;
+    --color-white: #fff;
+    --color-info-dark: #f7f7f7;
+    --color-info-light: #ececec;
+    --color-dark: #07041a;
+    --color-light: #ebe8ff;
+    --color-bg:#f1f3ff;
+    --color-gray: #a6a6a6;
+    --drk-clr: #000;
+
+    --card-border-raduis: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-paddig: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0rem .6rem 1.5rem #0b0a1144;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+    position: relative;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+}
+
+.mySwiper{
+    display: flex;
+}
+.box {
+    width: 100%;
+    height: 80vh;
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.building-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 80%;
+    padding: 5rem 0;
+    margin: 0 auto;
+}
+.house-fee,
+.house-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.house-fee li,
+.house-info li{
+    padding: 1rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(0,0,0,0.1);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #02093b;
+}
+
+.house-fee li span,
+.house-info li span{
+    font-weight: 400;
+}
+
+.pay-btn{
+    padding: 1rem;
+    text-decoration: none;
+    background: var(--warning);
+    color: var(--color-bg);
+    width: fit-content;
+}
+.owner-info{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.owner-image{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+}
+
+.owner-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+@media(width < 900px){
+    .box{
+        height: 80vh;
+    }
+    .container{
+        width: 90%;
+    }
+}
+
+@media(width < 700px){
+    .house-fee,
+    .house-info{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(width < 450px){
+    .house-fee,
+    .house-info{
+        grid-template-columns: 1fr;
+    }
+    .pay-btn{
+        width: inherit;
+        text-align: center;
+    }
+    .owner-info{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}

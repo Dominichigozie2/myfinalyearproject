@@ -1,0 +1,43 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 3rem 0;
+}
+
+.user-personal-info{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.imgae-box{
+    width: min(40rem,100%);
+    height: 40rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+}
+.imgae-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-name{
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.user-name span{
+    color: var(--color-gray);
+    font-size: 2rem;
+}
+.mail{
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}

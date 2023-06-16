@@ -1,0 +1,362 @@
+:root{
+    --color-primary: rgba(206, 199, 255, 0.8);
+    --success: #001ade;
+    --color-danger: #678cfb;
+    --warning: #000f84;
+    --color-white: #fff;
+    --color-info-dark: #f7f7f7;
+    --color-info-light: #ececec;
+    --color-dark: #07041a;
+    --color-light: #ebe8ff;
+    --color-bg:#f1f3ff;
+    --color-gray: #a6a6a6;
+    --drk-clr: #000;
+
+    --card-border-raduis: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-paddig: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0rem .6rem 1.5rem #0b0a1144;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    /* appearance: none; */
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    /* user-select: none; */
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+    position: relative;
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    overflow-x: hidden;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile{
+   width: 100%;
+}
+
+.upper{
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    background: var(--warning);
+    padding:2rem 0;
+    color: var(--color-info-dark);
+}
+
+.profile-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.presonal-details{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.name{
+    font-size: 1.7rem;
+}
+
+.email{
+    font-size: 1.4rem;
+}
+
+.number{
+    font-size: 1.2rem;
+}
+
+.image{
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  overflow: hidden;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-btn:hover{
+    background: var(--color-bg);
+    color: #001ade;
+}
+.profile-btn{
+    padding:.5rem 1rem;
+    width: 10rem;
+    border: 2px solid var(--color-bg);
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-bg);
+    font-size: 1.2rem;
+    border-radius: 2ch;
+    -webkit-border-radius: 2ch;
+    -moz-border-radius: 2ch;
+    -ms-border-radius: 2ch;
+    -o-border-radius: 2ch;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.payment-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.payment-menu{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1rem;
+}
+
+.payment-menu >li{
+    height: 4rem;
+    list-style: none;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    color: #0009;;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+
+}
+
+.profile-cont{
+    background: var(--color-white);
+    padding-bottom: 5rem;
+}
+
+.feed{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+}
+form{
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 3rem;
+    margin-bottom: 6rem;
+}
+
+.span-2{
+    grid-column: span 2;
+}
+ .input-box{
+   padding: 0.1rem 1rem;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    resize: none;
+ }
+ textarea{
+    padding:1rem;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    resize: none;
+    text-align: start;
+ }
+ .input-box input{
+    border: none;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+ }
+
+ .input-box input::placeholder{
+    color: #0004;
+ }
+
+ .down{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+ }
+
+ .room-mate-details{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .room-mate{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 1rem;
+    box-shadow: 0 1px 45px #0001;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+ .room-mate-details{
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+ }
+
+ .roommate-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    overflow: hidden;
+}
+
+ .roommate-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .roommate-content
+ {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+ }
+ .roommate-content h1{
+   font-size: 1.3rem;
+   color: #000;
+ }
+ .roommate-content h3{
+     font-size: 1.1rem;
+     color: #0004;
+    }
+.roommate-content h5{
+    color: #0004;
+}
+ 
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-content{
+  padding: 2rem;
+  box-shadow: 0 1px 45px rgba(0,0,0,0.07);
+  border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.content-about{
+  font-size: 1.1rem;
+  color: #0009;
+  text-align: justify;
+  line-height: 25px;
+}
+
+.feed-btn{
+    padding: 1rem 4rem;
+    background: var(--warning);
+    color: var(--color-bg);
+    font-weight: 500;
+    font-size: 1.1rem;
+    width: min-content;
+}
+
+
+
+.hobby-list{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1rem;
+}
+
+.hobby-list li{
+    font-size: 1.1rem;
+    list-style: circle;
+    padding: .5rem;
+    color: #0007;
+}
+
+ @media(width < 830px){
+    .profile-container{
+        width: 90%;
+        align-items: center;
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .profile-btn{
+        width: 100%;
+        cursor: pointer;
+    }
+    .payment-menu{
+       grid-template-columns: repeat(2, 1fr); 
+    }
+    .down{
+        grid-template-columns: repeat(1, 1fr);
+    }
+ }
+
+ @media(width < 514px){
+    .profile-container{
+        width: 90%;
+        align-items: center;
+        gap: 3rem;
+        display: flex;
+    }
+    .presonal-details{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .payment-menu{
+       grid-template-columns: repeat(1, 1fr); 
+    }
+    form{
+        display: grid;
+       grid-template-columns: 1fr; 
+    }
+    .span-2{
+        grid-column: span 1;
+    }
+    .room-mate{
+        gap: 1rem;
+    }
+    .roommate-image{
+        width: 60px;
+        height: 60px;
+    }
+ }

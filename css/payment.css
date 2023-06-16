@@ -1,0 +1,197 @@
+:root{
+    --color-primary: rgba(206, 199, 255, 0.8);
+    --success: #001ade;
+    --color-danger: #678cfb;
+    --warning: #000f84;
+    --color-white: #fff;
+    --color-info-dark: #f7f7f7;
+    --color-info-light: #ececec;
+    --color-dark: #07041a;
+    --color-light: #ebe8ff;
+    --color-bg:#f1f3ff;
+    --color-gray: #a6a6a6;
+    --drk-clr: #000;
+
+    --card-border-raduis: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-paddig: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0rem .6rem 1.5rem #0b0a1144;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html{
+    font-size: 14px;
+}
+
+body {
+    font-family: poppins, sans-serif;
+    font-size: 0.88rem;
+    overflow-x: hidden;
+    height: 90vh;
+    display: flex;
+}
+
+
+/* Styling for form container */
+
+.payment-container{
+    width: 97%;
+    height: 100%;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#paymentForm {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  /* Styling for form groups */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for labels */
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Styling for input fields */
+  input[type="email"],
+  input[type="tel"],
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+  
+  /* Styling for submit button */
+  button[type="submit"] {
+    background-color: #000bda;
+    color: white;
+    padding: 1rem 4rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    width: 100%;
+}
+  
+  button[type="submit"]:hover {
+    background-color: #6b72f8;
+  }
+  
+  .show{
+    position: relative;
+    height: 100%;
+    background-image: url(../image/R.jfif);
+    background-position: center;
+  }
+
+  .bg-cloth{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background: #000bdacf;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 4rem;
+   padding: 3rem;
+   color: #ebe8ff;
+  }
+
+  .header{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    background: var(--color-bg);
+    padding: .3rem 3rem;
+  }
+  .header > h1{
+      color: rgb(255,156,0);
+  }
+  .header > a{
+    color: red;
+    font-size: 1.3rem;
+  }
+
+  .Totals{
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-size: 1.2rem;
+    }
+.Totals li{
+    align-items: end;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact{
+ display: flex;
+ gap: 1rem;
+ flex-direction: column;
+}
+
+.contact h1{
+    background: var(--color-bg);
+    width: fit-content;
+    padding: .3rem 3rem;
+    color: rgb(255,156,0);
+    margin-bottom: 1rem;
+}
+.phone{
+    font-size: 1.2rem;
+}
+
+.support{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+marquee{
+  font-size: 1.1rem;
+  color: rgb(255,156,0);
+}
+
+.support a{
+    color: red;
+}
+

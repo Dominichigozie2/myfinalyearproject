@@ -1,0 +1,119 @@
+/* ==================== gogle fonts=========================== */
+*{
+    font-family: "Utuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+.users-table{
+    padding: 2rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+caption{
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 1rem;
+    text-align: start;
+}
+
+caption,
+th,td{
+    text-align: left;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+table thead th{
+    font-weight: 800;
+    text-align: start;
+    padding-bottom: 5px;
+    padding: 1rem;
+    background: rgba(0, 0, 252, 0.405);
+}
+
+.p-btn{
+    width: fit-content;
+    padding: 1rem 5rem;
+    background: var(--blue);
+    border: none;
+    outline: none;
+    color: var(--gray);
+    font-size: 1.2rem;
+}
+table tr{
+    color: var(--black1);
+    border-bottom: 1px solid var(--gray);
+}
+
+table tr:last-child{
+    border-bottom: none;
+}
+tr:nth-of-type(2n){
+  background: rgba(0, 0, 255, 0.104);
+}
+table tr td{
+    padding: 10px 0;
+}
+table tr td:last-child{
+    text-align: start;
+}
+table tr td:nth-child(1){
+    text-align: start;
+    padding-left:.5rem;
+}
+td a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--gray);
+}
+
+.prop-btn{
+    display: flex;
+    justify-content: space-around;
+}
+.action{
+    background: transparent;
+    outline: none;
+    offset: none;
+    border: none;
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+@media(width < 650px){
+th{
+    display: none;
+}
+td{
+        display: block;
+        padding: 0 1rem;
+ }
+ td::before{
+    content: attr(data-cell) ":";
+    font-weight: 800;
+    text-transform: capitalize;
+    padding: 1rem;
+ }
+}

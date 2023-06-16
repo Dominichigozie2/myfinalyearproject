@@ -1,0 +1,135 @@
+:root{
+    --color-primary: rgba(206, 199, 255, 0.8);
+    --success: #001ade;
+    --color-danger: #678cfb;
+    --warning: #000f84;
+    --color-white: #fff;
+    --color-info-dark: #f7f7f7;
+    --color-info-light: #ececec;
+    --color-dark: #07041a;
+    --color-light: #ebe8ff;
+    --color-bg:#e9ecff;
+    --color-gray: #a6a6a6;
+    --drk-clr: #000;
+
+    --card-border-raduis: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-paddig: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0rem .6rem 1.5rem #0b0a1144;
+}
+.footer{
+    margin-top: 5rem;
+    background: black;
+    padding: 5rem 1rem 2rem 1rem;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+}
+.upper-room{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    position: absolute;
+    top: -20%;
+    background: var(--color-bg);
+    border-radius: 2ch;
+    padding: 2rem 1rem;
+    width: 80%;
+    left: 10%;
+    -webkit-border-radius: 2ch;
+    -moz-border-radius: 2ch;
+    -ms-border-radius: 2ch;
+    -o-border-radius: 2ch;
+}
+.container-footer{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-self: end;
+    align-self: flex-end;
+}
+.footer-menu{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+
+.footer-menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.footer-menu ul h5{
+  color:  var(--color-danger);
+}
+.footer-menu ul li{
+    list-style: none;
+    padding: 0 .5rem;
+    color: gray;
+}
+.footer-menu ul li a{
+    color: gray;
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
+}
+.footer-menu ul li a i{
+    color: gray;
+    font-size: 1.2rem;
+}
+.footer .upper-room > .form{
+    width: 80%;
+    background: #fff;
+    padding: .5rem;
+    border-radius: 4ch;
+    -webkit-border-radius: 4ch;
+    -moz-border-radius: 4ch;
+    -ms-border-radius: 4ch;
+    -o-border-radius: 4ch;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.footer .upper-room .form .input{
+    padding: 1rem;
+    grid-column: span 2;
+}
+
+.footer .upper-room .form .mail-btn{
+    padding: 1rem 6rem;
+    font-size: 1rem;
+    border-radius: 4ch;
+    -webkit-border-radius: 4ch;
+    -moz-border-radius: 4ch;
+    -ms-border-radius: 4ch;
+    -o-border-radius: 4ch;
+    background: var(--warning);
+    color: var(--color-bg);
+}
+
+.info{
+    width: 100%;
+    color: gray;
+    padding: 1rem .1px .1px .1px;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    border-top: 1px solid gray;
+    justify-content: space-evenly;
+}
+.info p{
+    color: gray;
+}
