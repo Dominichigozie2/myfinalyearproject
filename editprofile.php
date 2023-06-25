@@ -10,6 +10,7 @@ if(isset($_POST['submit'])){
    $location = $_POST['elocation'];
    $depart = $_POST['edepartment'];
    $about = $_POST['eabout'];
+   $brand = $_POST['brands'];
    
    $sql = "UPDATE user SET uname ='{$name}', uphone ='{$phone}',uemail ='{$email}',ulocation ='{$location}', udepartment ='{$depart}',uabout ='{$about}' WHERE user_id = $uid";
 
@@ -17,13 +18,27 @@ if(isset($_POST['submit'])){
    
    if($result){
     echo "<script>alert('Property inserted Successfully')</script>";
-    header("Location:profile.php");
+    // header("Location:profile.php");
    }
    else{
     echo "<script>alert('Property not insert Successfully')</script>";
+
    }
+
+   foreach($brand as $item){
+    $query= "INSERT INTO hubby_tb(`ename`, `use_id`) VALUES ('$uid','$item')";
+    $query_run = mysqli_query($con,$query);
+    
 }
 
+    if($query_run){
+    echo "<script>alert('hubby inserted Successfully')</script>";
+    // header("Location:profile.php");
+    }
+    else{
+    echo "<script>alert('hubby not insert Successfully')</script>";
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +49,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a Property</title>
 
-    <link rel="stylesheet" href="./css/addproperty.css">
+    <link rel="stylesheet" href="./css/edit.css">
 </head>
 <body>
 
@@ -45,27 +60,21 @@ if(isset($_POST['submit'])){
    <div class="loader"></div>
    <!-- loader -->
 
-
-
-    <div class="container">
+    <div class="container-co">
         <h1 class="header">Edit <span>Profile</span></h1>
         <div class="form-group">
             <form method="post" enctype="multipart/form-data">
                 <div class="input-box">
-                    <input type="text" name="ename" required>
-                    <label>Name</label>
+                    <input type="text" name="ename"  placeholder="Name" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" name="ephone"  required>
-                    <label>Phone</label>
+                    <input type="text" name="ephone"  placeholder="Phone"  required>
                 </div>
                 <div class="input-box">
-                    <input type="email" name="email" required>
-                    <label>Mail</label>
+                    <input type="email"  placeholder="Email" name="email" required>
                 </div>
                 <div class="input-box">
-                    <input type="text" name="elocation"required>
-                    <label>Location</label>
+                    <input type="text" placeholder="Location" name="elocation"required>
                 </div>
                 
                     <select name="edepartment" class="input-box bold" required="required">
@@ -75,23 +84,20 @@ if(isset($_POST['submit'])){
                         <option value="cit">Computer Information And Technology</option>
                     </select>
                 
-                <div class="input-box">
-                    
-                <select name="ehubby" class="input-box bold" required="required multipart">
-                        <option value="">Hubby</option>
-                        <option value="football">football</option>
-                        <option value="reading">reading</option>
-                        <option value="drawing">Drawing</option>
-                        <option value="singing">Singing</option>
-                        <option value="writing">Writing</option>
-                        <option value="movies">Movies</option>
-                        <option value="games">Videogames</option>
-                        <option value="games">Others</option>
-                    </select>
+                <div class="radio-box">
+                    <div id="hubby">select hubby<i id="arrow" class="fa fa-angle-down"></i> </div>
+                    <div class="radio-container" id="hubby-container">
+                        <input type="checkbox" name="brands[]" value="Football"> Football <br><br>
+                        <input type="checkbox" name="brands[]" value="Singing"> Singing <br><br>
+                        <input type="checkbox" name="brands[]" value="Writing"> Writing <br><br>
+                        <input type="checkbox" name="brands[]" value="Dancing"> Dancing <br><br>
+                        <input type="checkbox" name="brands[]" value="Movies"> Movies <br><br>
+                        <input type="checkbox" name="brands[]" value="Reading"> Reading <br><br>
+                        <input type="checkbox" name="brands[]" value="other"> others <br><br>
+                    </div>
                 </div>
                 <div class="input-box span-2 textarea-box">
-                    <textarea name="eabout" class="textarea-box"></textarea>
-                    <label>Please Describe yourself in few words</label>
+                    <textarea name="eabout" class="textarea-box" placeholder="please describe yourself in few words"></textarea>
                 </div>
                 
                 <button type="submit" name="submit" class="contact-btn">Submit</button>

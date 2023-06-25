@@ -39,8 +39,17 @@ if($result == true)
                 $sql = "INSERT INTO property (utitle, ulocation, uprice, uroom,ukitchen,p_id, ubathroom , uwater, usecuritty,upeople,ulightfee,usecurityfee,uduration, ubuildpic, uroompic, ukitchenpic, ubathroompic) VALUES ('$title', '$loc', '$price', '$room', '$kitchen','$user_id', '$bath','$water','$sec','$people','$lightfee','$securityfee','$dur', '$aimg','$aimg1','$aimg2','$aimg3')";
                 $result = mysqli_query($con, $sql);
                 if($result){
-                    echo "<script> alert('Published Successfully')</script>";
-                    header("Location:propose.php?echo=true");                
+                    $sqlOne = "DELETE FROM proposal WHERE id = '$id'";
+                    $resultOne = mysqli_query($con, $sqlOne);
+                    if($resultOne == true)
+                    {
+                        $msg= "<script> alert('Deleted successfully')</script>";
+                        header("Location:propose.php?echo=true");
+                    }
+                    else{
+                        $msg= "<script> alert('Failed to Delete')</script>";
+                        header("Location:propose.php?echo=false");
+                    }              
                 }
             }else{
                 echo "<script> alert('Already Exist')</script>";

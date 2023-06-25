@@ -76,9 +76,9 @@
                       echo $row[4];
                   ?></td>
                   <td data-cell="Image">image</td>
-                  <td data-cell="Action"><a href="userdelete.php?uid=<?php
-                      echo $row[0];
-                  ?>><button class="action">Delete</button></a></td>
+                  <td data-cell="Action"><a href="propertyownerdelete.php?id=<?php
+                      echo $row[6];
+                  ?>"><button class="action">Delete</button></a></td>
                 </tr>
               <?php
                   }

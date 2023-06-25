@@ -42,6 +42,7 @@ body {
     position: relative;
     font-family: poppins, sans-serif;
     font-size: 0.88rem;
+    min-height: 100vh;
 }
 
 .color-dark{
@@ -270,9 +271,22 @@ nav{
 
 
 
-.prop-container{
-    padding: 4rem 0px;
+.edit-container{
     height: fit-content;
+    width: 80%;
+    margin:5rem auto;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.edit-btn{
+  height: max-content;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: var(--warning);
+  color: var(--color-bg);
 }
 
 form{
@@ -328,6 +342,7 @@ form{
     background: #fff;
     z-index: 1;
 }
+
 
 .textarea-box{
     height: 6rem;
@@ -397,110 +412,9 @@ option{
     width: 100%;
     object-fit: cover;
 }
-/* side nave */
-aside{
-    position: fixed;
-    top: 0;
-    left: -100%;
-    display: flex;
-    width: 100%;
-    background: var(--color-bg);
-    color: var(--drk-clr);
-    z-index: 500;
-    padding: 3rem 0;
-}
 
-.display{
-    left: 0;
-    transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-}
 
-.bars{
-    font-size: 1.5rem;
-    position: absolute;
-    right: 2.5rem;
-    top: 1.5rem;
-    display: none;
-    opacity: 0;
-}
-
-/* side nave */
-@media(width < 790px) {
-/* nav styling in small screen */
-.nav-list{
-    display: none;
-}
-h1{
-  font-size: 1.5rem;
-}
-h2{
-    font-size: 1.2rem;
-}
-h3{
-    font-size: 1.2rem;
-}
-h4{
-    font-size: 1rem;
-}
-h5{
-    font-size: .7rem;
-}
-p{
-    font-size: .77rem;
-}
-b{
-    font-weight: 600;
-}
-nav{
-    padding: .5rem;
-}
-.nav .logo img{
-    width: 2rem;
-    height: 2rem;
-}
-.nav-btn{
-    display: none;
-}
-.side-bar{
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  /* position: relative; */
-}
-.bars{
-    display: flex;
-    opacity: 0;
-}
-.sidenav-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 80%;
-    height: 70%;
-    margin: auto;
-}
-.sidenav-link{
-    list-style: none;
-    padding: 1rem;
-    color: var(--color-dark);
-    text-transform: capitalize;
-}
-.sidenav-btn{
-    align-self: center;
-}
-
-.close{
-    position: absolute;
-    font-size: 2rem;
-    right: 2rem;
-    top:4rem;
-}
-/* nav styling in small screen */
-
+@media (max-width: 700px) {
     .container{
         width: 90%;
     }

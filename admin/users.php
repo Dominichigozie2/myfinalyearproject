@@ -36,7 +36,7 @@
                   <th>Email</th>
                   <th>Phone</th>
                   <th>User_id</th>
-                  <th>User-img</th>
+                  <th>Gender</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -64,36 +64,25 @@
                     ?>
                     <tr>
                     <td data-cell="name"><?php
-                        echo $row[1];
+                        echo $row[1]; echo " "; echo $row[12];
                     ?></td>
-                    <td data-cell="Email"><?php
+                    <td data-cell="Mail">
+                    <?php
                         echo $row[2];
-                    ?></td>
+                    ?>    
+                        </td>
                     <td data-cell="Phone"><?php
                         echo $row[4];
                     ?></td>
-                    <td data-cell="Status"><?php
+                    <td data-cell="user_id"><?php
                         echo $row[6];
                     ?></td>
-                    <td data-cell="Image">
-                    <?php
-                         $pa = $row[6];
-                         $sl =  "SELECT u.*, p.* FROM allocation_tb AS a
-                         INNER JOIN user AS u ON a.name_id = u.user_id
-                         INNER JOIN property AS p ON a.property_id = p.pid WHERE name_id = $pa";
-                         $result = mysqli_query($con,$sl);
-                         if($result){
-                            while ($row = mysqli_fetch_assoc($result)) {
-                                echo $row['utitle'];
-                            }
-                         }else if($result < 1 ){
-                            echo "None";
-                         }
-                    ?>    
-                    </td>
+                    <td data-cell="Gender"><?php
+                        echo $row[8];
+                    ?></td>
                     <td data-cell="Action"><a href="userdelete.php?uid=<?php
-                        echo $row[0];
-                    ?>><button class="action">Delete</button></a></td>
+                        echo $row['0'];
+                    ?>"><button class="action">Delete</button></a></td>
                     </tr>
                 <?php
                     }

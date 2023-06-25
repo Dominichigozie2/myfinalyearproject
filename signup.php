@@ -57,7 +57,7 @@ if (isset($_REQUEST['log'])) {
         $row = mysqli_fetch_assoc($result);
         if ($row['utype'] == 'student' || $row['utype'] == 'landlord') {
             $_SESSION['uid'] = $row['uid'];
-            $_SESSION['uemail'] = $email;
+            $_SESSION['uemail'] = $row['uemail'];
             $_SESSION['utype'] = $row['utype'];
             $_SESSION['user_id'] = $row['user_id'];
             header("location:index.php");

@@ -84,9 +84,9 @@ include("config.php");
                                                     ?></td>
                         <td data-cell="Action" class="prop-btn"><a href="propertyview.php?id=<?php
                                                                                 echo $row[0];
-                                                                                ?>"><button class="action">View</button></a><a href="propertyview.php?id=<?php
+                                                                                ?>"><button class="action">View</button></a><a href="proposaldelete.php?id=<?php
                                                                                 echo $row[0];
-                                                                                ?>><button class=" action">Delete</button></a></td>
+                                                                                ?>"><button class="action">Delete</button></a></td>
                     </tr>
                 <?php
                 }

@@ -96,4 +96,12 @@ fadeContainer3.forEach(fade =>{
 })
 
 
+const hubby = document.querySelector('#hubby');
+hubby.addEventListener('click', ()=>{
+  const body = document.querySelector("#hubby-container");
+  const arow = document.querySelector("#arrow");
+
+  body.classList.toggle("bod");
+  arow.classList.toggle("fa-angle-up");
+});
 

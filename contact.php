@@ -3,33 +3,29 @@ ini_set('session.cache_limiter','public');
 session_cache_limiter(false);
 session_start();
 include("config.php");
-$error= " ";
-$msg= "";
 
 
-if(isset($_POST['send']))
-{
-    $name=$_POST['Pname'];
-    $mail=$_POST['Pmail'];
-    $phone=$_POST['Pphone'];
-    $sub=$_POST['Psub'];
-    $comment=$_POST['textarea'];
-     
-    if(!empty($name) && !empty($mail) && !empty($phone) && !empty($sub) && !empty($comment))
-    {
-        $sql="INSERT INTO contact_tb (cname,cmail,cphone,csubject,ccomment) VALUES ('$name','$mail','$phone','$sub','$comment')";		
-        $result=mysqli_query($con, $sql);
-        if($result){
-            echo "<script>alert('Message Sent Successfully')</script>";
-            header("location:contact.php");
-        }
-        else{
-            echo "<script>alert('Message not Sent')</script>";
-        }
-     }else{
-        echo "<script>alert('Please fill the fields ')</script>";
+if(isset($_POST['send'])) {
+  $name = $_POST['Pname'];  
+  $mail = $_POST['Pmail'];  
+  $phone = $_POST['Pphone'];  
+  $sub = $_POST['Psub'];  
+  $text = $_POST['textarea']; 
+  
+  $user_id = $_SESSION['user_id'];
+
+  if(!empty($name) && !empty($mail) && !empty($phone) && !empty($sub) &&!empty($text)) {
+    $sql = "INSERT INTO contact_tb(`cname`, `cmail`, `cphone`, `csubject`, `ccomment`, `cuid`) VALUES ('$name','$mail','$phone','$sub','$text','$user_id')";
+    $result = mysqli_query($con, $sql);
+    if($result){
+        echo "<script> alert('Sent')</script>";
+        header("Location:./contact.php");
+    }else{
+        echo "<script> alert('Not Sent')</script>";
     }
+  }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -97,7 +93,7 @@ if(isset($_POST['send']))
                 <div class="spanTwo">
                     <h4>Get in touch</h4>
                     <div class="form-group">
-                        <form method="post" action="#">
+                    <form method="post" enctype="multipart/form-data">
                             <div class="input-box">
                                 <input type="text" name="Pname" id="Pname" required>
                                 <label>Name</label>

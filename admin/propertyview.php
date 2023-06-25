@@ -76,14 +76,12 @@ include("config.php");
         <li>Number of rooms <span><?php
         echo $row['4'];
         ?></span></li>
-        <li>numer of bathroom <span><?php
-        echo $row['6'];
-        ?></span></li>
+        <!--  -->
         <li>Roommates <span><?php
-        echo $row['16'];
+        echo $row['14'];
         ?></span></li>
         <li>Security <span><?php
-        echo $row['15'];
+        echo $row['13'];
         ?></span></li>
         <li>Kitchen <span><?php
         echo $row['5'];
@@ -92,9 +90,9 @@ include("config.php");
         echo $row['6'];
         ?></span></li>
         <li>water <span><?php
-        echo $row['14'];
+        echo $row['12'];
         ?></span></li>
-        <li>Duration <span><?php
+        <li>Duration<span><?php
         echo $row['17'];
         ?></span></li>
         <li>house_id <span><?php
@@ -107,7 +105,7 @@ include("config.php");
         echo $row['3'];
         ?></span></li>
         <li>Light <span><?php
-        echo $row['17'];
+        echo $row['15'];
         ?></span></li>
         <li>Security <span>2000</span></li>
         <a href="./publish.php?id=<?php

@@ -4,6 +4,7 @@
     session_cache_limiter(false);
     session_start();
     include ("config.php");
+    $user_id = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +33,6 @@
     <!-- preloader -->
     <section class="profile">
         <?php
-          $user_id = $_SESSION['user_id'];
           $sql = "SELECT * FROM user WHERE user_id = $user_id";
           $query = mysqli_query($con, $sql);
           if($row = mysqli_fetch_array($query)){
@@ -40,11 +40,13 @@
         <div class="upper">
             <div class="profile-container">
                 <div class="presonal-details">
-                    <div class="image">
+                    <a class="image" href="editimage.php?id=<?php
+                        echo $row['6'];
+                    ?>">
                         <img src="./upload/<?php
                             echo $row['7'];
                         ?>" alt="">
-                    </div>
+                    </a>
                     <div class="content">
                         <h1 class="name"><?php
                             echo $row['1'];
@@ -194,18 +196,34 @@
                         <br>
                         <br>
                         <div class="about-content">
+                            <?php
+                                $sql ="SELECT * FROM user WHERE user_id = $user_id";
+                                $query_run = mysqli_query($con, $sql);
+                                if($row = mysqli_fetch_array($query_run)){
+                                    
+                            ?>
                             <p class="content-about">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure molestias animi necessitatibus aliquid. Sint deserunt similique aspernatur distinctio id magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure molestias animi necessitatibus aliquid. Sint deserunt similique aspernatur distinctio id magni.
+                                <?php
+                                echo $row[10];
+                                ?>
                             </p>
+                            <?php
+                                }
+                            ?>
                             <h1>Hobbies</h1>
+                            <?php
+                                $sql ="SELECT * FROM hubby_tb WHERE `ename` = '$user_id'";
+                                $run = mysqli_query($con, $sql);
+                                while($row = mysqli_fetch_array($run)){
+                            ?>
                             <ul class="hobby-list">
-                                <li>Music</li>
-                                <li>Reading</li>
-                                <li>Drawing</li>
-                                <li>vGame</li>
-                                <li>Writing</li>
+                            <li><?php
+                                echo $row[2];
+                                ?></li>
                             </ul>
-
+                        <?php
+                                }
+                        ?>
                         </div>
                     </div>
                 </div>

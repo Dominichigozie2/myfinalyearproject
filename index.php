@@ -4,7 +4,12 @@ session_cache_limiter(false);
 session_start();
 include("config.php");
 
+if(!isset($_SESSION['uemail'])){
+    header("location:./signup.php");
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
