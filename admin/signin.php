@@ -58,6 +58,7 @@ if(isset($_REQUEST['log']))
         if($row){
             header("location:dashboard.php");
             $_SESSION['amail'] = $row['amail'];
+            $_SESSION['id'] = $row['id'];
         }
         else{
             echo "<script> alert('email or password does not match')</script>";

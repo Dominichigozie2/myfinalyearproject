@@ -14,10 +14,11 @@ include("config.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
-    <link rel="stylesheet" href="./css/about.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/about.css"/>
+    <link rel="stylesheet" href="./css/nav.css"/>
     <link rel="stylesheet" href="./css/loader.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.1-web (1)/fontawesome-free-6.1.1-web/css/all.css">
 </head>
 
 <body>
@@ -85,7 +86,7 @@ include("config.php");
             </section>
         </section>
             <?php
-            include("./include/footer.php");
+            include("./include/footer2.php");
             ?>
 
             <script src="./js/nav.js"></script>

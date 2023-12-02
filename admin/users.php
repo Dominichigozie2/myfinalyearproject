@@ -82,18 +82,21 @@
                     ?></td>
                     <td data-cell="Action"><a href="userdelete.php?uid=<?php
                         echo $row['0'];
-                    ?>"><button class="action">Delete</button></a></td>
+                    ?>"><button class="action">Delete</button></a>
+                    </td>
                     </tr>
                 <?php
                     }
                 ?>
             </tbody>
         </table>
-        <button onclick="window.print()" type="button" class="p-btn">Print !</button>
+       <div class="buttons">
+       <button onclick="window.print()" type="button" class="p-btn">Print !</button>
+        <br>
+        <a href="message.php" class="p-btn">Message</a>
+       </div>
     </div>
 
-
-        
         <!-- Datatables JS -->
 		<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
 		<script src="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>

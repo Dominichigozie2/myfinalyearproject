@@ -48,7 +48,10 @@ table thead th{
     padding: 1rem;
     background: rgba(0, 0, 252, 0.405);
 }
-
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
 .p-btn{
     width: fit-content;
     padding: 1rem 5rem;
@@ -57,6 +60,8 @@ table thead th{
     outline: none;
     color: var(--gray);
     font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer;
 }
 table tr{
     color: var(--black1);

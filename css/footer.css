@@ -25,7 +25,7 @@
 .footer{
     margin-top: 5rem;
     background: black;
-    padding: 5rem 1rem 2rem 1rem;
+    padding: 10rem 1rem 2rem 1rem;
     position: relative;
     width: 100%;
     height: fit-content;
@@ -37,11 +37,13 @@
     align-items: center;
     position: absolute;
     top: -20%;
-    background: var(--color-bg);
+    color: var(--color-info-dark);
+    background: var(--warning);
     border-radius: 2ch;
     padding: 2rem 1rem;
     width: 80%;
     left: 10%;
+    margin-bottom: 3rem;
     -webkit-border-radius: 2ch;
     -moz-border-radius: 2ch;
     -ms-border-radius: 2ch;
@@ -92,7 +94,7 @@
 }
 .footer .upper-room > .form{
     width: 80%;
-    background: #fff;
+    background: var(--color-info-light);
     padding: .5rem;
     border-radius: 4ch;
     -webkit-border-radius: 4ch;
@@ -106,6 +108,7 @@
 .footer .upper-room .form .input{
     padding: 1rem;
     grid-column: span 2;
+    background: transparent;
 }
 
 .footer .upper-room .form .mail-btn{

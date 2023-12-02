@@ -248,8 +248,7 @@ section{
 .icon i{
     font-size: 3.5rem;
 }
-/* services */
-/
+
 @media(width < 700px) {
 /* nav styling in small screen */
 .nav-list{

@@ -36,11 +36,9 @@ include("config.php");
                     $sloc = $_REQUEST['city'];
                     $sroom = $_REQUEST['room'];
                     $sprice = $_REQUEST['price'];
-                    $sname = $_REQUEST['name'];
 
-                    $sql = "SELECT * FROM `property` WHERE utitle = '$sname' AND ulocation = '$sloc' OR uprice = '$sprice' AND uroom = 'sroom'";
+                    $sql = "SELECT * FROM `property` WHERE ulocation = '$sloc' OR uprice = '$sprice' AND uroom = 'sroom'";
                     $result = mysqli_query($con, $sql);
-
                     if (mysqli_num_rows($result) > 0) {
 
                 ?>
@@ -51,11 +49,11 @@ include("config.php");
                                     $_SESSION["uid"] = $row['uid'];
                             ?>
                                     <swiper-slide class="box">
-                                        <div class="box-img">
-                                            <img src="property/<?php
-                                                                echo $row['8'];
-                                                                ?>" alt="pimage" class="box-img-img">
-                                        </div>
+                                    <div class="box-img">
+                                        <img src="property/<?php
+                                                            echo $row['9'];
+                                                            ?>" alt="pimage" class="box-img-img">
+                                    </div>
                                         <div class="box-description">
                                             <div class="box-show">
                                                 <h5 class="box-name">
@@ -83,9 +81,8 @@ include("config.php");
                                                         ?><span>room</span></li>
                                                 </ul>
                                                 <div class="box-buttons">
-                                                    <a href="propertydetails.php?uid=<?php echo $row['7']; ?>
+                                                    <a href="propertydetails.php?id=<?php echo $row['0']; ?>
                                     " class="info-btn">View More</a>
-                                                    <a href="#" class="buy-btn">Payments</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,6 +92,7 @@ include("config.php");
                             }
                         } else {
                             echo " <script> alert('No property found')</script>";
+                            echo"<h1>Not Found Please visit the property Page for search</h1>";
                         }
                     }
                     ?>
@@ -112,8 +110,9 @@ include("config.php");
                     ?>
                         <div class="recent-box">
                             <div class="recent-image">
-                                <img src="./property/<?php echo $row[8];
-                                                        ?>" alt="">
+                            <img src="property/<?php
+                                echo $row['9'];
+                               ?>" alt="pimage">
                             </div>
                             <div class="recent-details">
                                 <h4><?php echo $row[1];
@@ -126,7 +125,7 @@ include("config.php");
                     }
                     ?>
                 </div>
-                <a href="#" class="show-more">View All</a>
+                <a href="properties.php" class="show-more">View All</a>
             </div>
 
         </div>

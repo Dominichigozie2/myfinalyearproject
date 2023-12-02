@@ -160,6 +160,22 @@
 
                     <div class="room-mate-details">
                         <h1>Room Mates</h1>
+                        <?php
+                                // $sql ="SELECT * FROM user WHERE user_id = $user_id";
+                                // $query_run = mysqli_query($con, $sql);
+                                // if($row = mysqli_fetch_array($query_run)){
+                                    $sql = $sql = "SELECT allocation_tb.*
+                                    FROM allocation_tb
+                                    INNER JOIN property ON allocation_tb.property_id = property.uid
+                                    INNER JOIN user ON allocation_tb.name_id = user.user_id
+                                    WHERE user.user_id = $user_id";
+                                    $result = mysqli_query($con, $sql);
+                                    if ($result->num_rows > 0) {
+                                        while ($row = mysqli_fetch_assoc($result)) {
+                                            echo "Yes";
+                                        }
+                                    
+                            ?>
                         <div class="room-mate">
                             <div class="roommate-image">
                                 <img src="./image/senior-man-face-portrait-wearing-bowler-hat_53876-148154.webp" alt="">
@@ -190,6 +206,9 @@
                                 <h5>07046586037</h5>
                             </div>
                         </div>
+                        <?php
+                         }
+                        ?>
                     </div>
                     <div class="cart">
                         <h1>About Me</h1>

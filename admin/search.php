@@ -81,3 +81,43 @@ function searchFeed($query) {
 // Close the database connection
 $con->close();
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Datatables JS -->
+    <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/plugins/datatables/dataTables.select.min.js"></script>
+
+    <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.flash.min.js"></script>
+    <script src="assets/plugins/datatables/buttons.print.min.js"></script>
+
+
+    <!-- ====================custom js======================== -->
+    <script src="./js/custom.js"></script>
+    <!-- ====================custom js======================== -->
+
+
+</body>
+
+</html>

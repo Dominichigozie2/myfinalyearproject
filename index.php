@@ -70,19 +70,7 @@ if(!isset($_SESSION['uemail'])){
                                 </select>
                             </div>
                             <div class="input-box">
-                                <select name="price">
-                                    <option value="">price</option>
-                                    <option value="100000">N100,000.00</option>
-                                    <option value="120000">N120,000.00</option>
-                                    <option value="180000">N180,000.00</option>
-                                    <option value="200000">N200,000.00</option>
-                                    <option value="240000">N240,000.00</option>
-                                    <option value="260000">N260,000.00</option>
-                                    <option value="290000">N290,000.00</option>
-                                </select>
-                            </div>
-                            <div class="input-box">
-                                <input type="text" name="name" id="search" placeholder="Search Name">
+                            <input type="text" name="price" id="Price" placeholder="Price">
                             </div>
                             <div class="input-box">
                                 <input type="text" name="city" id="search" placeholder="Search Location">

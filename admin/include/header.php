@@ -70,21 +70,19 @@ include("config.php");
                     </a>
                 </li>
                 <ul class="sub-menu2">
-                    <li class="">  
-                        <a href="addproperty" class="nav-link">
-                            <span class="icon"><i class="fa fa-plus"></i></span>
-                            <span class="tittle">Add Property</span>
-                        </a>
-                    </li>
                     <li><a href="./property.php" class="nav-link">
                         <span class="icon"><i class="fa fa-box"></i></span>
                         <span class="tittle">property</span>
                     </a></li>
+                    <li><a href="./propose.php" class="nav-link">
+                        <span class="icon"><i class="fa fa-box"></i></span>
+                        <span class="tittle">property proposals</span>
+                    </a></li>
+                    <li><a href="./approval.php" class="nav-link">
+                        <span class="icon"><i class="fa fa-box"></i></span>
+                        <span class="tittle">hostel proposals</span>
+                    </a></li>
                 </ul>
-                <li><a href="./propose.php" class="nav-link">
-                    <span class="icon"><i class="fa fa-box"></i></span>
-                    <span class="tittle">proposals</span>
-                </a></li>
                 <li><a href="logout.php">
                         <span class="icon"><i class="fa fa-sign-out"></i></span>
                         <span class="tittle">Logoout</span>
@@ -128,7 +126,7 @@ include("config.php");
                         <div class="imgae-box">
                             <img src="./user/<?php
                                                 echo $row[5];
-                                                ?>" alt="" />
+                                                 ?>" alt="" />
                         </div>
                     <?php
                     }

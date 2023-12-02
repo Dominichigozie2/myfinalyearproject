@@ -2,7 +2,7 @@
 // ini_set('session.cache_limiter','public');
 // session_cache_limiter(false);
 // session_start();
-include("config.php");
+include("./config.php");
 ?>
 
 <!DOCTYPE html>
@@ -14,12 +14,71 @@ include("config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- css link -->
-    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./fontawesome-free-6.1.1-web (1)/fontawesome-free-6.1.1-web/css/all.css">
 
 </head>
 
 <body>
+    <div class="firstnav">
+        <div class="nav-view">
+          <div class="right">
+            <li><i class="fa fa-phone"></i> +234 7046 5860 37</li>
+            <li><i class="fa fa-envelope"></i> chigoziedomnic@gmail.com</li>
+          </div>    
+          <div class="center">
+          </div>    
+          <div class="left">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class=""></i>
+            <i class=""></i>
+            <br>
+            <br>
+            <div class="notification">
+            <?php
+                 if(isset($_SESSION['utype'])){
+                    if ($_SESSION['utype'] != 'landlord'){
+            ?>
+                <i class="fa fa-bell" id="notibtn"></i>
+                <label class="sign">
+                    <?php
+                        $sql = "SELECT * FROM `notifications` LIMIT 3";
+                        $query = mysqli_query($con, $sql);
+                        if($row = mysqli_num_rows($query)){
+                            echo $row;
+                        }
+                    ?>
+                </label>
+                <div class="notification-cont">
+                <?php
+                    $sql = "SELECT * FROM `notifications` LIMIT 4";
+                    $query = mysqli_query($con, $sql);
+                    while($row = mysqli_fetch_array($query)){
+                ?>
+                
+                    <a href="notify.php?id=<?php
+                        echo $row['0'];
+                    ?>"><li>
+                        <p class="Name"><?php
+                        echo $row['5'];
+                    ?></p>
+                        <small><?php
+                        echo $row['4'];
+                    ?></small>
+                    </li></a>
+                <?php
+                    }
+                }
+                ?>
+                </div>
+                <?php
+                }
+                ?>
+            </div>
+          </div>    
+        </div>
+    </div>
     <nav>
         <div class="container">
             <div class="nav">
@@ -43,9 +102,6 @@ include("config.php");
                     <a href="./contact.php" class="nav-link" id="nav-link">
                         <li>contact</li>
                     </a>
-                    <!-- <a href="#" class="nav-link" id="nav-link">
-                        <li>Pages</li>
-                    </a> -->
                     <button id="parent-menu" class="nav-link" id="nav-link">
                         <li id="btn">Account
                         <?php
@@ -58,13 +114,20 @@ include("config.php");
                                 <a href="./profile.php" class="nav-link"id="nav-link">
                                     <li>Profile</li>
                                 </a>
+                                <a href="./studentpropose.php?id=<?php
+                                    echo $_SESSION['user_id'];
+                                ?>" class="nav-link"id="nav-link">
+                                    <li>Hostel Proposal</li>
+                                </a>
                                 <?php
                                     }else{
                                 ?>
                                 <a href="./profile.php" class="nav-link"id="nav-link">
                                     <li>Profile</li>
                                 </a>
-                                <a href="" class="nav-link"id="nav-link">
+                                <a href="./propertyowned.php?id=<?php
+                                    echo $_SESSION["user_id"];
+                                ?>" class="nav-link"id="nav-link">
                                     <li>Your property</li>
                                 </a>
                                 <?php

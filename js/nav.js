@@ -15,3 +15,17 @@ navLinkEls.forEach(navLinkEl=>{
     navLinkEl.classList.add("inactive");
   }
 });
+
+const notification_btn = document.querySelector("#notibtn");
+
+notification_btn.addEventListener("click", () =>{
+  const notification = document.querySelector(".notification-cont");
+  notification.classList.toggle("notify");
+});
+
+window.addEventListener("scroll", () =>{
+  const notification = document.querySelector(".notification-cont");
+  notification.classList.remove("notify");
+});
+
+// console.log(notification, notification_btn);

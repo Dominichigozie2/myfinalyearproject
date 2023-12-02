@@ -12,7 +12,7 @@ if($result == true)
     if($result == true){
         $sql = "SELECT * FROM proposal WHERE id = '$id'";
         $result = mysqli_query($con, $sql);
-        if (mysqli_num_rows($result) > 0) {
+        if (mysqli_num_rows($result)  <= 1) {
 
                 while ($row = mysqli_fetch_array($result)) {
                 $title = $row['1'];
@@ -35,37 +35,28 @@ if($result == true)
                 $sql = "SELECT * FROM property WHERE p_id = '$user_id'";
                 $result = mysqli_query($con, $sql);
                 $num = mysqli_num_rows($result);
-                if ($num < 1){
+                if ($num <= 1){
                 $sql = "INSERT INTO property (utitle, ulocation, uprice, uroom,ukitchen,p_id, ubathroom , uwater, usecuritty,upeople,ulightfee,usecurityfee,uduration, ubuildpic, uroompic, ukitchenpic, ubathroompic) VALUES ('$title', '$loc', '$price', '$room', '$kitchen','$user_id', '$bath','$water','$sec','$people','$lightfee','$securityfee','$dur', '$aimg','$aimg1','$aimg2','$aimg3')";
                 $result = mysqli_query($con, $sql);
                 if($result){
-                    $sqlOne = "DELETE FROM proposal WHERE id = '$id'";
-                    $resultOne = mysqli_query($con, $sqlOne);
-                    if($resultOne == true)
-                    {
-                        $msg= "<script> alert('Deleted successfully')</script>";
-                        header("Location:propose.php?echo=true");
-                    }
-                    else{
-                        $msg= "<script> alert('Failed to Delete')</script>";
-                        header("Location:propose.php?echo=false");
-                    }              
+                    echo "<script> alert('Published Successfully')</script>";
+                    header("Location:propose.php?echo=true");                
                 }
             }else{
                 echo "<script> alert('Already Exist')</script>";
-                header("Location:propose.php?echo=false");                
+                header("Location:propose.php?echo=false1");                
             }
         }
      }
     }
     else{
         echo "<script> alert('Failed to Publish')</script>";
-        header("Location:propose.php?echo=false");    
+        header("Location:propose.php?echo=false2");    
     } 
 }
 else{
 	echo "<script> alert('Couldn't find the id')</script>";
-	header("Location:propose.php?echo=false");    
+	header("Location:propose.php?echo=false3");    
 }
 mysqli_close($con);
 ?>
